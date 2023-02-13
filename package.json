@@ -1,14 +1,14 @@
 {
-  "name": "query-types",
-  "version": "0.1.4",
-  "description": "Handles numeric and boolean values for Express req.query object.",
+  "name": "query-types-v2",
+  "version": "0.1.5",
+  "description": "Handles numeric, boolean and null values for Express req.query object.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:xpepermint/query-types.git"
+    "url": "git@github.com:aspyropoulos/query-types-v2.git"
   },
   "keywords": [
     "query",
@@ -24,10 +24,6 @@
     "express",
     "connect"
   ],
-  "author": "Xpepermint",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xpepermint/query-types/issues"
-  },
-  "homepage": "https://github.com/xpepermint/query-types"
+  "author": "aspyropoulos",
+  "license": "MIT"
 }

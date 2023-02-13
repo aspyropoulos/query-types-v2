@@ -18,7 +18,7 @@ function isNumber(val) {
 }
 
 function isBoolean(val) {
-  return val === 'false' || val === 'true';
+  return val === "false" || val === "true";
 }
 
 function isArray(val) {
@@ -26,7 +26,7 @@ function isArray(val) {
 }
 
 function parseValue(val) {
-  if (typeof val == 'undefined' || val == '') {
+  if (typeof val == "undefined" || val == "") {
     return null;
   } else if (isBoolean(val)) {
     return parseBoolean(val);
@@ -46,7 +46,7 @@ function parseObject(obj) {
   var key, val;
   for (key in obj) {
     val = parseValue(obj[key]);
-    if (val !== null) result[key] = val; // ignore null values
+    result[key] = val;
   }
   return result;
 }
@@ -64,12 +64,12 @@ function parseNumber(val) {
 }
 
 function parseBoolean(val) {
-  return val === 'true';
+  return val === "true";
 }
 
 function middleware() {
-  return function(req, res, next) {
+  return function (req, res, next) {
     req.query = parseObject(req.query);
     next();
-  }
+  };
 }
