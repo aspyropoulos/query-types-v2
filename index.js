@@ -26,8 +26,10 @@ function isArray(val) {
 }
 
 function parseValue(val) {
-  if (typeof val == "undefined" || val == "") {
+  if (val == "null") {
     return null;
+  } else if (typeof val == "undefined" || val == "undefined" || val == "") {
+    throw new Error("Middleware query-types: Empty string is not allowed");
   } else if (isBoolean(val)) {
     return parseBoolean(val);
   } else if (isArray(val)) {
